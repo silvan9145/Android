@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navyBlue">#19198C</color>
+    <color name="darkBlue">#2020AF</color>
+    <color name="blue">#4C4CA6</color>
+    <color name="lightBlue">#6666AA</color>
+    <color name="evenLighterBlue">#7F7FBF</color>
+    <color name="newBlue">#CCCCEE</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#77DD77</color>
+    <color name="black">#101010</color>
+    <color name="gray">#BBBBBB</color>
+    <color name="lightGray">#DDDDDD</color>
+    <color name="darkGray">#888888</color>
+    <color name="reallyDarkGray">#444444</color>
+    <color name="white">#EFEFEF</color>
+    <color name="darkGreen">#218321</color>
+    <color name="teal">#23AFAF</color>
+    <color name="darkTeal">#1C8C8C</color>
+    <color name="coolGreen">#009977</color>
+    <color name="primary">#E43F3F</color>
+    <color name="primaryDark">#E12929</color>
+    <color name="primaryDarker">#CC1D1D</color>
+    <color name="purple">#8932D9</color>
+</resources>

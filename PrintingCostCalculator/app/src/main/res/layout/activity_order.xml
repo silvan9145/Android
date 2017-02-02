@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/lightGray">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarOrder"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/actionbarstyle"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+        <TextView
+            android:id="@+id/toolbarTitleOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Sleeve"
+            android:textSize="36sp"
+            android:layout_marginLeft="15sp"
+            android:gravity="center_vertical"
+            android:paddingRight="10sp"
+            android:textColor="@color/white"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/bottomContainerOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@drawable/actionbarstyle">
+
+        <LinearLayout
+            android:id="@+id/tjcLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/totalJobCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Job Cost"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="18"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/totalJobCostEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="false"
+                android:drawableLeft="@drawable/dinero"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pgcLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/perGarmentCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Per Garment Cost"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="18"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/perGarmentCostEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="false"
+                android:drawableLeft="@drawable/dinero"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomContainerOrder"
+        android:layout_below="@id/toolbarOrder">
+
+        <LinearLayout
+            android:id="@+id/allEditingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/shirtCostsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shirt Costs"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/individualGarmentCostTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Individual Garment Cost"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/individualGarmentCostEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/inkMaterialsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ink and Materials Cost"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/inkMaterialsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/numGarmentsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="# of Garments"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/numGarmentsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0"
+                android:inputType="number"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/totalGarmentsMaterialsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Garment and Material Cost"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/totalGarmentsMaterialsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style2"/>
+
+            <TextView
+                android:id="@+id/totalPerGarmentMaterialsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Cost Per Garment + Materials"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/totalPerGarmentMaterialsEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style2"/>
+
+            <TextView
+                android:id="@+id/timeCompleteJobTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time to Complete Job"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"/>
+
+            <TextView
+                android:id="@+id/designTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Design"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/designEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0.0"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/prePressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pre-Press"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/prePressEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0.0"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/printingPackagingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Printing and Packaging"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/printingPackagingEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0.0"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/hourlyMinimumShopProfitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hourly Minimum Shop Profit"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/hourlyMinShopProfitEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="0.00"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/style1"/>
+
+            <TextView
+                android:id="@+id/totalHoursTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Hours"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="28dp"/>
+
+            <EditText
+                android:id="@+id/totalHoursEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="15dp"
+                android:padding="15dp"
+                android:background="@drawable/style2"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

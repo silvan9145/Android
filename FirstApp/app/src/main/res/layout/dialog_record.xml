@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogstyle">
+
+    <TextView
+        android:id="@+id/newRecordingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Recording"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@color/logoColor"
+        android:shadowColor="@color/black"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="15"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/fileNameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/newRecordingLabel"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/fileNameTextView"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Filename:"
+            android:textSize="18sp"
+            android:textColor="@color/logoColor"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="10"/>
+        <EditText
+            android:id="@+id/editRecordingName"
+            android:layout_weight="5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Filename here"
+            android:background="@drawable/textboxstyle"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/recordingButtonContainer"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/fileNameContainer"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/dialog_startRecording"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/record"
+            android:background="@drawable/button_selector"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:padding="5dp"/>
+
+        <ImageButton
+            android:id="@+id/dialog_stopRecording"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/stop"
+            android:background="@drawable/button_selector"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitCenter"
+            android:padding="6dp"/>
+
+        <Button
+            android:id="@+id/closeButtonRecordDialog"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_selector_cancel"
+            android:text="Cancel"
+            android:textColor="@color/logoColor"
+            android:shadowColor="@color/black"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="12"/>
+    </LinearLayout>
+</RelativeLayout>
